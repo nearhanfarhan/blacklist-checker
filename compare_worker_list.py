@@ -9,14 +9,18 @@ FUZZY_MATCH_THRESHOLD = 80  # Adjust as needed
 # Authenticate
 gc = gspread.service_account(filename='/Users/farhan.chaudhry/Documents/Scripts/Blacklist Checker/credentials.json')
 
-comparison_list = '/Users/farhan.chaudhry/Documents/Scripts/Blacklist Checker/Job&Talent Cyclists - April batch - Sheet2.csv'
+comparison_list = '/Users/farhan.chaudhry/Documents/Scripts/Blacklist Checker/Job&Talent Cyclists - potential candidates - July.csv'
+
+terminated_employee_sheet = 'https://docs.google.com/spreadsheets/d/1lvqwzCiT216ah5mE4KWlsSzA4SDdoriFyXMTBJh2fMo/edit?gid=0#gid=0'
+oow_offboarding_sheet = 'https://docs.google.com/spreadsheets/d/1VRME96O2tI8yjij8st6iRQt8K8FzfwUmtC7UdALvkus/edit?gid=0#gid=0'
+iwh_offboarding_south_sheet = 'https://docs.google.com/spreadsheets/d/1qbLcKRzLDuautE4ap-nI6fOH6OMAxUkj0oN1ALsG95I/edit?gid=0#gid=0'
+iwh_offboarding_north_sheet = 'https://docs.google.com/spreadsheets/d/11F0oF3F6jymI0MtG1qTVzS0VG_lnbnUGx1swuUj5qmM/edit?gid=0#gid=0'
+no_show_tracker_sheet = 'https://docs.google.com/spreadsheets/d/1ejFfVVkfQOvIroZiV50OHVcjLv_8hzKinT5gTZL2wcw/edit?gid=0#gid=0'
+failed_assessment_sheet = 'https://docs.google.com/spreadsheets/d/1ejFfVVkfQOvIroZiV50OHVcjLv_8hzKinT5gTZL2wcw/edit?gid=552972327#gid=552972327'
 
 # List of Google Sheets to pull from
 sheet_urls = [
-    'https://docs.google.com/spreadsheets/d/1qbLcKRzLDuautE4ap-nI6fOH6OMAxUkj0oN1ALsG95I/edit?gid=0#gid=0',
-    'https://docs.google.com/spreadsheets/d/1VRME96O2tI8yjij8st6iRQt8K8FzfwUmtC7UdALvkus/edit?gid=0#gid=0',
-    'https://docs.google.com/spreadsheets/d/11F0oF3F6jymI0MtG1qTVzS0VG_lnbnUGx1swuUj5qmM/edit?gid=0#gid=0',
-    'https://docs.google.com/spreadsheets/d/1lvqwzCiT216ah5mE4KWlsSzA4SDdoriFyXMTBJh2fMo/edit?gid=0#gid=0'
+    oow_offboarding_sheet, iwh_offboarding_south_sheet, iwh_offboarding_north_sheet, no_show_tracker_sheet, failed_assessment_sheet, terminated_employee_sheet
 ]
 
 # --- Pull Blacklist and Normalize Names ---
