@@ -20,12 +20,11 @@ gc = gspread.service_account_from_dict(credentials_dict)
 
 # --- Google Sheet URLs ---
 sheet_urls = {
-    'Terminated Employees': 'https://docs.google.com/spreadsheets/d/1lvqwzCiT216ah5mE4KWlsSzA4SDdoriFyXMTBJh2fMo/edit?gid=0',
     'OOW Offboarding': 'https://docs.google.com/spreadsheets/d/1VRME96O2tI8yjij8st6iRQt8K8FzfwUmtC7UdALvkus/edit?gid=0',
     'IWH Offboarding South': 'https://docs.google.com/spreadsheets/d/1qbLcKRzLDuautE4ap-nI6fOH6OMAxUkj0oN1ALsG95I/edit?gid=0',
     'IWH Offboarding North': 'https://docs.google.com/spreadsheets/d/11F0oF3F6jymI0MtG1qTVzS0VG_lnbnUGx1swuUj5qmM/edit?gid=0',
-    'No Show Tracker': 'https://docs.google.com/spreadsheets/d/1ejFfVVkfQOvIroZiV50OHVcjLv_8hzKinT5gTZL2wcw/edit?gid=0',
-    'Failed Assessments': 'https://docs.google.com/spreadsheets/d/1ejFfVVkfQOvIroZiV50OHVcjLv_8hzKinT5gTZL2wcw/edit?gid=552972327',
+    'Foot Patrol No Show Tracker': 'https://docs.google.com/spreadsheets/d/1ejFfVVkfQOvIroZiV50OHVcjLv_8hzKinT5gTZL2wcw/edit?gid=0',
+    'Homebase Terminated Employees': 'https://docs.google.com/spreadsheets/d/1lvqwzCiT216ah5mE4KWlsSzA4SDdoriFyXMTBJh2fMo/edit?gid=0'
 }
 
 def load_blacklist():
