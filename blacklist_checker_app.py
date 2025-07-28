@@ -4,12 +4,19 @@ import gspread
 from gspread_dataframe import get_as_dataframe
 from rapidfuzz import fuzz, process
 from io import StringIO
+import json
+from oauth2client.service_account import ServiceAccountCredentials
+import os
+
+
+
 
 # --- Config ---
 FUZZY_MATCH_THRESHOLD = 80
 
-# --- Google Auth ---
-gc = gspread.service_account(filename='credentials.json')
+# Load credentials from Streamlit secrets
+credentials_dict = json.loads(st.secrets["GOOGLE_CREDENTIALS"])
+gc = gspread.service_account_from_dict(credentials_dict)
 
 # --- Google Sheet URLs ---
 sheet_urls = {
